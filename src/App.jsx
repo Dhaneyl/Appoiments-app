@@ -40,6 +40,7 @@ let eliminarPaciente = id => {
     pacientes={pacientes}
     setPacientes={setPacientes}
       paciente={paciente}
+      setPaciente={setPaciente}
     />
     <LispadoPacientes
     pacientes={pacientes} 

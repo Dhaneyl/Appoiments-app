@@ -3,7 +3,7 @@ import {Error} from './Error';
 
  
 
-export const Formulario = ({pacientes, setPacientes, paciente}) => {
+export const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
    const [nombre, setNombre] = useState('')
    const [propietario, setPropietario] = useState('')
    const [email, setEmail] = useState('')
@@ -48,11 +48,10 @@ export const Formulario = ({pacientes, setPacientes, paciente}) => {
      if(paciente.id){
         //editando
         objPacientes.id = paciente.id
-        const pacientesActualizado = pacientes.map( pacienteState => pacienteState.id === 
-            paciente.id ? objPacientes : pacienteState)
+        const pacientesActualizados = pacientes.map( pacienteState => pacienteState.id === paciente.id ? objPacientes : pacienteState )
 
-            setPacientes(pacientesActualizado)
-            setPacientes({})
+            setPacientes(pacientesActualizados)
+            setPaciente({})
 
      } else{
         //Nuevo registro
