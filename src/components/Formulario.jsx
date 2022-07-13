@@ -27,8 +27,8 @@ export const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => 
     return random + fecha
    }
   
-   const handleSubmit = (e)=>{
-    e.preventDefault();
+   const handleSubmit = (event)=>{
+    event.preventDefault();
     if ([nombre, propietario, email, fecha, sintomas].includes('')){
         setError(true); 
         return;
@@ -94,7 +94,7 @@ export const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => 
                     placeholder='Nombre de tu mascota'
                     className='bolder-2 w-full p-2 mt-2 rounded-md '
                     value={nombre}
-                    onChange={(e)=> setNombre(e.target.value)}
+                    onChange={(event)=> setNombre(event.target.value)}
                 />
             </div>
             <div className='mb-5'>
@@ -107,7 +107,7 @@ export const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => 
                     placeholder='Nombre del propietario'
                     className='bolder-2 w-full p-2 mt-2 rounded-md '
                     value={propietario}
-                    onChange={(e)=> setPropietario(e.target.value)}
+                    onChange={(event)=> setPropietario(event.target.value)}
                 />
             </div>
             <div className='mb-5'>
@@ -120,7 +120,7 @@ export const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => 
                     placeholder='Emial del propietario'
                     className='bolder-2 w-full p-2 mt-2 rounded-md '
                     value={email}
-                    onChange={(e)=> setEmail(e.target.value)}
+                    onChange={(event)=> setEmail(event.target.value)}
                 />
             </div>
             <div className='mb-5'>
@@ -132,7 +132,7 @@ export const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => 
                     type='date'
                     className='bolder-2 w-full p-2 mt-2 rounded-md '
                     value={fecha}
-                    onChange={(e)=> setFecha(e.target.value)}
+                    onChange={(event)=> setFecha(event.target.value)}
                 />
             </div>
 
@@ -145,7 +145,7 @@ export const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => 
                     className='bolder-2 w-full p-2 mt-2 rounded-md '
                     placeholder='Describe los sintomas'
                     value={sintomas}
-                    onChange={(e)=> setSintomas(e.target.value)}
+                    onChange={(event)=> setSintomas(event.target.value)}
                 />
             </div>
             <input
